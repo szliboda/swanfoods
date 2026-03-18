@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>我的配送酒店 - 天鹅配送系统</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header sub-header">
+            <div class="back-btn" onclick="goBack()">← 返回</div>
+            <div class="title">我的配送酒店</div>
+            <div class="placeholder"></div>
+        </div>
+
+        <!-- 统计栏 -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-num" id="hotelCount">0</span>
+                <span class="stat-label">负责酒店</span>
+            </div>
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="搜索酒店名称" id="searchInput" oninput="searchHotels()">
+            <span class="clear-btn" id="clearBtn" onclick="clearSearch()" style="display: none;">✕</span>
+        </div>
+
+        <!-- 酒店列表 -->
+        <div class="hotel-list" id="hotelList">
+            <!-- 动态生成 -->
+        </div>
+
+        <!-- 空状态 -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-icon">🏨</div>
+            <div class="empty-text">暂无配送酒店</div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/my-hotels.js"></script>
+</body>
+</html>

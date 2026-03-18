@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>管理员 - 天鹅配送系统</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header admin-header">
+            <div class="admin-badge">👤 管理员</div>
+            <div class="welcome-text">欢迎回来</div>
+            <div class="date-text" id="currentDate"></div>
+        </div>
+
+        <!-- 菜单区域 -->
+        <div class="menu-section">
+            <div class="section-title">📦 订单管理</div>
+            
+            <div class="menu-grid">
+                <div class="menu-card primary" onclick="goToImport()">
+                    <div class="menu-icon">📥</div>
+                    <div class="menu-info">
+                        <div class="menu-name">导入送货单</div>
+                        <div class="menu-desc">上传图片格式送货单</div>
+                    </div>
+                    <span class="menu-arrow">></span>
+                </div>
+
+                <div class="menu-card" onclick="viewDeliveryImages()">
+                    <div class="menu-icon">🖼️</div>
+                    <div class="menu-info">
+                        <div class="menu-name">查看送货单</div>
+                        <div class="menu-desc">浏览所有司机送货单</div>
+                    </div>
+                    <span class="menu-arrow">></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">👥 人员管理</div>
+            
+            <div class="menu-grid">
+                <div class="menu-card" onclick="showUserManagement()">
+                    <div class="menu-icon">👷</div>
+                    <div class="menu-info">
+                        <div class="menu-name">用户管理</div>
+                        <div class="menu-desc">添加删除用户，编辑酒店分配</div>
+                    </div>
+                    <span class="menu-arrow">></span>
+                </div>
+
+                <div class="menu-card" onclick="showDriverAccounts()">
+                    <div class="menu-icon">🚚</div>
+                    <div class="menu-info">
+                        <div class="menu-name">司机账号</div>
+                        <div class="menu-desc">管理司机密码权限</div>
+                    </div>
+                    <span class="menu-arrow">></span>
+                </div>
+
+                <div class="menu-card" onclick="goToMap()">
+                    <div class="menu-icon">🗺️</div>
+                    <div class="menu-info">
+                        <div class="menu-name">配送路线</div>
+                        <div class="menu-desc">查看司机配送地图</div>
+                    </div>
+                    <span class="menu-arrow">></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">🏨 酒店管理</div>
+            
+            <div class="menu-grid">
+                <div class="menu-card" onclick="showHotelManagement()">
+                    <div class="menu-icon">🏨</div>
+                    <div class="menu-info">
+                        <div class="menu-name">酒店信息管理</div>
+                        <div class="menu-desc">管理所有酒店信息，添加删除编辑</div>
+                    </div>
+                    <span class="menu-arrow">></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="section-title">⚙️ 系统设置</div>
+            
+            <div class="menu-grid">
+                <div class="menu-card" onclick="showPasswordModal()">
+                    <div class="menu-icon">🔐</div>
+                    <div class="menu-info">
+                        <div class="menu-name">修改密码</div>
+                        <div class="menu-desc">更改管理员密码</div>
+                    </div>
+                    <span class="menu-arrow">></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 退出按钮 -->
+        <div class="logout-section">
+            <div class="logout-btn" onclick="logout()">
+                <span class="logout-icon">🚪</span>
+                <span class="logout-text">退出登录</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
